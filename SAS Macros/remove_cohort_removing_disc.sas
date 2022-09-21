@@ -35,7 +35,7 @@ if transfer_dbn ^= ' ' and ndpl ^= 'NDPL' and transfer_dbn ^= acc_dbn then cohor
 if transfer_dbn in ('79X695', '79Q344', '79M921', '79M973') then cohort_removing = 1;
 
 /* transfer to state approved HSE program and no HSE earned */ 
-if transfer_dbn in ('79Q950', '79M331') and grad_discharge ^= '30' then cohort_removing = 1;
+if transfer_dbn in ('79Q950', '79M331') then cohort_removing = 1;
 
 /* a grad discharge itself can never be cohort-removing */
 if disc_code in ('26','27','28','30','47','62') then cohort_removing = .; 

@@ -9,7 +9,7 @@ run;
 proc sql;
 create table grad_sch_all_subgroups as
 
-select 	dbn, 
+select 	grad_dbn as dbn, 
 		'All Students' as subgroup_all, 
 		membership_desc, 
 		sum(grad_pts) as grad_numerator,
@@ -20,7 +20,7 @@ group by 1, 2, 3
 
 union all 
 
-select 	dbn, 
+select 	grad_dbn as dbn, 
 		group_ethnic as subgroup_all, 
 		membership_desc, 
 		sum(grad_pts) as grad_numerator,
@@ -31,7 +31,7 @@ group by 1, 2, 3
 
 union all 
 
-select 	dbn, 
+select 	grad_dbn as dbn, 
 		group_econ as subgroup_all, 
 		membership_desc, 
 		sum(grad_pts) as grad_numerator,
@@ -44,7 +44,7 @@ group by 1, 2, 3
 
 union all 
 
-select 	dbn, 
+select 	grad_dbn as dbn, 
 		group_swd as subgroup_all, 
 		membership_desc, 
 		sum(grad_pts) as grad_numerator,
@@ -57,7 +57,7 @@ group by 1, 2, 3
 
 union all 
 
-select 	dbn, 
+select 	grad_dbn as dbn, 
 		group_lep as subgroup_all, 
 		membership_desc, 
 		sum(grad_pts) as grad_numerator,

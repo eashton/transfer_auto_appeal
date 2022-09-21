@@ -1,4 +1,4 @@
-%macro output_grad_rate_sch ( dsn_in = , file_out = ); 
+%macro output_grad_rate_sch ( dsn_in = ); 
 
 proc sql;
 create table school_subgroup_list as
@@ -12,7 +12,7 @@ from hst.school_list as t1
 quit;
 
 proc sql;
-create table output_grad_sch as
+create table hst.output_grad_sch as
 select 		t1.*, 
 			y4.grad_denominator as denominator_4ygr,
 			y4.grad_numerator as numerator_4ygr,

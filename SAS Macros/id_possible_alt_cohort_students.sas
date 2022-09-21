@@ -50,4 +50,11 @@ from int_all_stu_w_alt as t1
 	on input(t1.id, best.) = t2.student_id;
 quit;
 
+data &dsn_out;
+set &dsn_out;
+if school_name = 'NEW VISIONS AIM CHARTER HS I' then grad_dbn = '84K395';
+if school_name = 'URBAN DOVE TEAM CHARTER SCHOOL' then grad_dbn = '84K417';
+run;
+
+
 %mend;

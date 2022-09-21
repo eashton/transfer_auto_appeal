@@ -27,20 +27,20 @@ options nolabel spool mautosource mprint
 %add_exam_data								(dsn_in = hst.auto_appeal_stu_v04,
 											dsn_out = hst.auto_appeal_stu_v05);
 	
-%calculate_grad_rates_by_subgroup  			(dsn_in = hst.auto_appeal_stu_v05,
-											dsn_out = hst.grad_rate_by_subgroup);
+%calculate_grad_rates_by_subgroup 			(dsn_in = hst.auto_appeal_stu_v05,
+	 										dsn_out = hst.grad_rate_by_subgroup);
 
 %calculate_pis_by_subgroup					(dsn_in = hst.auto_appeal_stu_v05,
-											dsn_out = hst.pi_by_subgroup);
+											dsn_out = hst.output_pi_by_subgroup);
 
-%output_grad_rate_sch						(dsn_in = hst.grad_rate_by_subgroup,
-											file_out = grad_rate_sch.csv);
+%output_grad_rate_sch						(dsn_in = hst.grad_rate_by_subgroup
+											);
 
-%output_grad_rate_stu						(dsn_in = hst.auto_appeal_stu_v05,
-											file_out = grad_rate_stu.csv);
+%output_grad_rate_stu						(dsn_in = hst.auto_appeal_stu_v05
+											);
 
-%output_pi_stu								(dsn_in = hst.auto_appeal_stu_v05,
-											file_out = pi_stu.csv);
+%output_pi_stu								(dsn_in = hst.auto_appeal_stu_v05
+											);
 
 
 
