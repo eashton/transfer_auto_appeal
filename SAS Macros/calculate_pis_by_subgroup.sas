@@ -49,7 +49,6 @@ union all
 
 select 	alt_cohort_dbn, 
 		group_ethnic as subgroup_all, 
-		count(ELA) as ELA_total_members ,
 		sum(ELA = 1) as ELA_1,
 		sum(ELA = 2) as ELA_2,
 		sum(ELA = 3) as ELA_3,
